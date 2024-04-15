@@ -1,0 +1,23 @@
+{
+  "name": "@x.render/render-ui",
+  "version": "1.0.0",
+  "description": "React-based mobile component library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint-fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "stylelint-fix": "stylelint --fix src**/*.{css,scss,less}",
+    "prepare": "npx render-lint init  --force",
+    "render-lint-fix": "npm run eslint-fix && npm run stylelint-fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@x.render/render-lint": "^1.1.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint",
+    "src/**/*.{css,scss,less}": "stylelint"
+  }
+}
